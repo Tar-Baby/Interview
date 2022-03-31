@@ -1,4 +1,4 @@
-# Exercise 1
+# Exercise 3
 
 A massive school of glowing lanternfish swims past. They must spawn quickly to reach such large numbers - maybe exponentially quickly? You should model their growth rate to be sure.
 
