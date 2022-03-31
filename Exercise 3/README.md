@@ -56,7 +56,7 @@ In this example, after 18 days, there are a total of 26 fish. After 256 days, th
 
 ## Assignment
 
-Find a way to simulate lanternfish. How many lanternfish would there be after 80 days? Determine this in the following way:
+Find a way to simulate lanternfish. How many lanternfish would there be after 256 days? Determine this in the following way:
 
 Write a function `lanternfish` that takes the pathname (of type `str`) of a text file containing the ages of several hundred nearby lanternfish. The function must return how many lanternfish (of type `int`) there would be after 256 days.
 
