@@ -65,8 +65,8 @@ Write a function `lanternfish` that takes the pathname (of type `str`) of a text
 In this interactive session we assume the text files input_01.txt and input_02.txt to be located in the current directory.
 
 ```
->>> lanternfish('ages01.txt')
+>>> lanternfish('input_01.txt')
 26984457539
->>> lanternfish('ages02.txt')
+>>> lanternfish('input_02.txt')
 1650309278600
 ```
