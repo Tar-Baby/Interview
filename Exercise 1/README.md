@@ -44,16 +44,16 @@ In this example, there are 7 measurements that are larger than the previous meas
 
 How many measurements are larger than the previous measurement? Determine this in the following way:
 
-Write a function sonar that takes the pathname (of type str) of a text file containing a sonar sweep report. Each line of the report is a measurement of the sea floor depth. The function must return the number of measurements (of type int) that are larger than the previous measurement.
+Write a function sonar that takes the pathname (of type `str`) of a text file containing a sonar sweep report. Each line of the report is a measurement of the sea floor depth. The function must return the number of measurements (of type `int`) that are larger than the previous measurement.
 
 
 
 ## Example
-In this interactive session we assume the text files sweep01.txt and sweep02.txt to be located in the current directory.
+In this interactive session we assume the text files `input_01.txt` and `input_02.txt` to be located in the current directory.
 
 ```
->>> sonar('sweep01.txt')
+>>> sonar('input_01.txt')
 7
->>> sonar('sweep02.txt')
+>>> sonar('input_02.txt')
 1696
 ```
