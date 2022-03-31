@@ -1,17 +1,17 @@
 #!/usr/bin/env python3
 
 
-def lanternfish(filename):
+def sonar(filename):
     # TODO
     return 0
 
 
 def main():
-    with open("output_2a.txt") as f:
+    with open("output.txt") as f:
         output = [int(x.strip()) for x in f.readlines()]
     for i, expected in enumerate(output):
         filename = f"input/input_{i + 1:02}.txt"
-        result = lanternfish(filename)
+        result = sonar(filename)
         if result == expected:
             print(f"Correct result for case {i + 1}: {result}")
         else:

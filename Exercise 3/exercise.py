@@ -7,7 +7,7 @@ def lanternfish(filename):
 
 
 def main():
-    with open("output_2b.txt") as f:
+    with open("output.txt") as f:
         output = [int(x.strip()) for x in f.readlines()]
     for i, expected in enumerate(output):
         filename = f"input/input_{i + 1:02}.txt"

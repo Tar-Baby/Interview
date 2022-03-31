@@ -4,6 +4,7 @@ As a submarine drops below the surface of the ocean, it automatically performs a
 
 For example, suppose you had the following report:
 
+```
 199
 200
 208
@@ -14,6 +15,7 @@ For example, suppose you had the following report:
 269
 260
 263
+```
 
 This report indicates that, scanning outward from the submarine, the sonar sweep found depths of 199, 200, 208, 210, and so on.
 
@@ -21,6 +23,7 @@ The first order of business is to figure out how quickly the depth increases, ju
 
 To do this, count the number of times a depth measurement increases from the previous measurement. (There is no measurement before the first measurement.) In the example above, the changes are as follows:
 
+```
 199 (N/A - no previous measurement)
 200 (increased)
 208 (increased)
@@ -31,6 +34,7 @@ To do this, count the number of times a depth measurement increases from the pre
 269 (increased)
 260 (decreased)
 263 (increased)
+```
 
 In this example, there are 7 measurements that are larger than the previous measurement.
 
@@ -40,14 +44,16 @@ In this example, there are 7 measurements that are larger than the previous meas
 
 How many measurements are larger than the previous measurement? Determine this in the following way:
 
-Write a function sonar that takes the pathname (of type str) of a text file containing a sonar sweep report. Each line of the report is a measurement of the sea floor depth. The function must return the number of measurements (of type int) that are larger than the previous measurement.
+Write a function `sonar` that takes the filename (of type `str`) of a text file containing a sonar sweep report. Each line of the report is a measurement of the sea floor depth. The function must return the number of measurements (of type `int`) that are larger than the previous measurement.
 
 
 
 ## Example
-In this interactive session we assume the text files sweep01.txt and sweep02.txt to be located in the current directory.
+In this interactive session we assume the text files `input_01.txt` and `input_02.txt` to be located in the current directory.
 
->>> sonar('sweep01.txt')
+```
+>>> sonar('input_01.txt')
 7
->>> sonar('sweep02.txt')
+>>> sonar('input_02.txt')
 1696
+```
