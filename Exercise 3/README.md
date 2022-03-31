@@ -50,15 +50,15 @@ After 18 days: 6,0,6,4,5,6,0,1,1,2,6,0,1,1,1,2,2,3,3,4,6,7,8,8,8,8
 
 Each day, a `0` becomes a `6` and adds a new `8` to the end of the list, while each other number decreases by `1` if it was present at the start of the day.
 
-In this example, after 18 days, there are a total of 26 fish. After 256 days, there would be a total of 26984457539.
+In this example, after 18 days, there are a total of 26 fish. After 80 days, there would be a total of 5934.
 
 
 
 ## Assignment
 
-Find a way to simulate lanternfish. How many lanternfish would there be after 256 days? Determine this in the following way:
+Find a way to simulate lanternfish. How many lanternfish would there be after 80 days? Determine this in the following way:
 
-Write a function `lanternfish` that takes the pathname (of type `str`) of a text file containing the ages of several hundred nearby lanternfish. The function must return how many lanternfish (of type `int`) there would be after 256 days.
+Write a function `lanternfish` that takes the pathname (of type `str`) of a text file containing the ages of several hundred nearby lanternfish. The function must return how many lanternfish (of type `int`) there would be after 80 days.
 
 ## Example
 
@@ -66,7 +66,7 @@ In this interactive session we assume the text files `input_01.txt` and `input_0
 
 ```
 >>> lanternfish('input_01.txt')
-26984457539
+5934
 >>> lanternfish('input_02.txt')
-1650309278600
+365131
 ```
