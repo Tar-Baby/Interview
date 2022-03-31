@@ -47,7 +47,7 @@ Write a function `sonar` that takes the pathname (of type `str`) of a text file 
 
 ## Example
 
-In this interactive session we assume the text files input_01.txt and input_02.txt to be located in the current directory.
+In this interactive session we assume the text files `input_01.txt` and `input_02.txt` to be located in the current directory.
 
 ```
 >>> sonar('input_01.txt')
