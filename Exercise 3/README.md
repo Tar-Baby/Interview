@@ -56,17 +56,17 @@ In this example, after 18 days, there are a total of 26 fish. After 80 days, the
 
 ## Assignment
 
-Find a way to simulate lanternfish. How many lanternfish would there be after 80 days? Determine this in the following way:
+Find a way to simulate lanternfish. How many lanternfish would there be after 80 days? How many after 256 days? Determine this in the following way:
 
-Write a function `lanternfish` that takes the pathname (of type `str`) of a text file containing the ages of several hundred nearby lanternfish. The function must return how many lanternfish (of type `int`) there would be after 80 days.
+Write a function `lanternfish` that takes the pathname (of type `str`) of a text file containing the ages of several hundred nearby lanternfish, along with the number of days (of type `int`) that are considered. The function must return how many lanternfish (of type `int`) there will be.
 
 ## Example
 
 In this interactive session we assume the text files `input_01.txt` and `input_02.txt` to be located in the current directory.
 
 ```
->>> lanternfish('input_01.txt')
+>>> lanternfish('input_01.txt', 80)
 5934
->>> lanternfish('input_02.txt')
+>>> lanternfish('input_02.txt', 80)
 365131
 ```
