@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 
 
-def lanternfish(filename):
+#I need a 2nd argument, the number of days
+#80 is the default given the example and content of output file
+def lanternfish(filename, days=80):
     # TODO
     return 0
 
