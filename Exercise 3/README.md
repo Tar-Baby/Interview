@@ -8,7 +8,7 @@ However, this process isn’t necessarily synchronized between every lanternfish
 
 Furthermore, you reason, a new lanternfish would surely need slightly longer before it’s capable of producing more lanternfish: two more days for its first cycle.
 
-So, Vsuppose you have a lanternfish with an internal timer value of `3`:
+So, suppose you have a lanternfish with an internal timer value of `3`:
 
 - After one day, its internal timer would become `2`.
 - After another day, its internal timer would become `1`.
