@@ -3,9 +3,6 @@
 
 #I need a 2nd argument, the number of days
 #80 is the default given the example and content of output file
-def lanternfish_population(filename, days=80):
-    # TODO
-
 
 #read the line from the input file, split by comma, and turn them into lanternfish objects
 #instantiate with constructor
@@ -13,7 +10,35 @@ def lanternfish_population(filename, days=80):
 #create a list of objects of class Lanternfish
 #create methods in lanternfish class to handle the biological timer
 #a count() method will get me the end result
-    return 0
+
+file_content = []
+lanternfish_ages = []
+
+class lanternfish():
+    def __init__(self, inner_timer):
+        self.default_timer = 8
+        self.inner_timer = inner_timer
+
+    def breed_countdown(self):
+        self.inner_timer = self.inner_timer -1
+
+def lanternfish_population(filename, days = 80):
+    with open(filename) as file:
+        file_content = file.readline().split(',')
+
+    for element in file_content:
+        lanternfish_ages.append(int(element))
+
+    for temp in range(days):
+        for fish in lanternfish_ages:
+            new_fish = lanternfish(lanternfish_ages[fish])
+
+
+   # print(lanternfish_ages)
+    #print(lanternfish.default_timer)
+
+
+    return sum(lanternfish_ages)
 
 
 def main():
