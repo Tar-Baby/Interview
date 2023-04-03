@@ -37,8 +37,8 @@ def lanternfish_population(filename: str, days=80):
         file_content = file.readline().split(',')
 
     for element in file_content:
-        lanternfish_school.append(Lanternfish(int(element)))
-        
+        lanternfish_school.append(Lanternfish(int(element.strip())))
+
     # loop for lanternfish population
     for temp in range(days):
         for fish in lanternfish_school:

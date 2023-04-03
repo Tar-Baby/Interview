@@ -12,7 +12,7 @@ def sonar(filename):
         file_content = file.readlines()
 
     for element in file_content:
-        measurements.append(int(element))
+        measurements.append(int(element.strip()))
 
     while count < len(measurements) - 1:
         if measurements[count + 1] > measurements[count]:
