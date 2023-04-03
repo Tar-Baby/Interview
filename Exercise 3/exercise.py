@@ -3,7 +3,6 @@
 
 # I need a 2nd argument, the number of days
 # 80 is the default given the example and content of output file
-
 # read the line from the input file, split by comma, and turn them into lanternfish objects
 # instantiate with constructor
 # the number of iterations is the number of days, the loop executes n times
@@ -39,11 +38,9 @@ def lanternfish_population(filename: str, days=80):
 
     for element in file_content:
         lanternfish_school.append(Lanternfish(int(element)))
-    # print(lanternfish_school)
-
+        
     # loop for lanternfish population
     for temp in range(days):
-        # print(lanternfish_school)
         for fish in lanternfish_school:
             fish.check_countdown(lanternfish_school)
             fish.breed_countdown()
