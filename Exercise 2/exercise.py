@@ -16,8 +16,6 @@ def sonar(filename):
     for element in file_content:
         measurements.append(int(element.strip()))
 
-    # print(measurements)
-
     # iterating through measurements to group them and add them up
     while index < len(measurements) - 2:
         sum_measurements.append(measurements[index] + measurements[index + 1] + measurements[index + 2])
@@ -33,9 +31,6 @@ def sonar(filename):
 
 
 def main():
-    # result = sonar("input/input_01.txt")  # quick way to verify results with .txt files
-    # print(result)  # should be equal to 5
-
     with open("output.txt") as f:
         output = [int(x.strip()) for x in f.readlines()]
     for i, expected in enumerate(output):

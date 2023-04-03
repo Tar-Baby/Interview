@@ -49,9 +49,6 @@ def lanternfish_population(filename: str, days=80):
 
 
 def main():
-    # result = lanternfish_population("input/input_01.txt", 18)  # quick way to verify results with .txt files
-    # print(result)
-
     with open("output.txt") as f:
         output = [int(x.strip()) for x in f.readlines()]
     for i, expected in enumerate(output):
