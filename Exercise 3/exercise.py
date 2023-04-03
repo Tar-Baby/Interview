@@ -6,7 +6,7 @@
 
 # read the line from the input file, split by comma, and turn them into lanternfish objects
 # instantiate with constructor
-# el numero de iteraciones es el numero de dias, el loop corre n veces
+# the number of iterations is the number of days, the loop executes n times
 # create a list of objects of class Lanternfish
 # create methods in lanternfish class to handle the biological timer
 # a count() method will get me the end result
