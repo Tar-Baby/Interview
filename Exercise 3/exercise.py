@@ -1,52 +1,60 @@
 #!/usr/bin/env python3
 
 
-#I need a 2nd argument, the number of days
-#80 is the default given the example and content of output file
+# I need a 2nd argument, the number of days
+# 80 is the default given the example and content of output file
 
-#read the line from the input file, split by comma, and turn them into lanternfish objects
-#instantiate with constructor
-#el numero de iteraciones es el numero de dias, el loop corre n veces
-#create a list of objects of class Lanternfish
-#create methods in lanternfish class to handle the biological timer
-#a count() method will get me the end result
+# read the line from the input file, split by comma, and turn them into lanternfish objects
+# instantiate with constructor
+# el numero de iteraciones es el numero de dias, el loop corre n veces
+# create a list of objects of class Lanternfish
+# create methods in lanternfish class to handle the biological timer
+# a count() method will get me the end result
 
-file_content = []
-lanternfish_ages = []
 
 class Lanternfish:
 
-    def __init__(self, x = 8):
+    def __init__(self, x: int = 9):
         self.timer = x
+
+    def __repr__(self):
+        rep = f"{self.timer}"
+        return rep
 
     def breed_countdown(self):
         self.timer = self.timer - 1
 
+    def check_countdown(self, lanternfish_list: list):
+        if self.timer == 0:
+            self.timer = 7
+            lanternfish_list.append(Lanternfish())  # could be improved
 
 
-    def check_countdown(self, lanternfish_ages):
-        if self.timer == 0 :
-            lanternfish_ages.append(Lanternfish())
-            self.timer = 6;
+def lanternfish_population(filename: str, days=80):
+    file_content = []  # list of string values
+    lanternfish_school = []  # list of lanternfish-type objects
 
-def lanternfish_population(filename, days = 80):
     with open(filename) as file:
         file_content = file.readline().split(',')
 
     for element in file_content:
-        lanternfish_ages.append(int(element))
+        lanternfish_school.append(Lanternfish(int(element)))
+    # print(lanternfish_school)
 
+    # loop for lanternfish population
     for temp in range(days):
-        for fish in lanternfish_ages:
-            new_fish = Lanternfish(lanternfish_ages[fish])
+        # print(lanternfish_school)
+        for fish in lanternfish_school:
+            fish.check_countdown(lanternfish_school)
+            fish.breed_countdown()
 
-
-   # print(lanternfish_ages)
-
-    return sum(lanternfish_ages)
+    return len(lanternfish_school)
 
 
 def main():
+    # result = lanternfish_population("input/input_01.txt", 18)  # quick way to verify results with .txt files
+    # print(result)
+
     with open("output.txt") as f:
         output = [int(x.strip()) for x in f.readlines()]
     for i, expected in enumerate(output):
@@ -56,7 +64,7 @@ def main():
             print(f"Correct result for case {i + 1}: {result}")
         else:
             print(f"Incorrect result for case {i + 1}: {expected} is " \
-                f"expected, but {result} is returned")
+                  f"expected, but {result} is returned")
 
 
 if __name__ == "__main__":
