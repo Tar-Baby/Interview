@@ -14,13 +14,20 @@
 file_content = []
 lanternfish_ages = []
 
-class lanternfish():
-    def __init__(self, inner_timer):
-        self.default_timer = 8
-        self.inner_timer = inner_timer
+class Lanternfish:
+
+    def __init__(self, x = 8):
+        self.timer = x
 
     def breed_countdown(self):
-        self.inner_timer = self.inner_timer -1
+        self.timer = self.timer - 1
+
+
+
+    def check_countdown(self, lanternfish_ages):
+        if self.timer == 0 :
+            lanternfish_ages.append(Lanternfish())
+            self.timer = 6;
 
 def lanternfish_population(filename, days = 80):
     with open(filename) as file:
@@ -31,12 +38,10 @@ def lanternfish_population(filename, days = 80):
 
     for temp in range(days):
         for fish in lanternfish_ages:
-            new_fish = lanternfish(lanternfish_ages[fish])
+            new_fish = Lanternfish(lanternfish_ages[fish])
 
 
    # print(lanternfish_ages)
-    #print(lanternfish.default_timer)
-
 
     return sum(lanternfish_ages)
 
